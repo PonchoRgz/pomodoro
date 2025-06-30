@@ -75,6 +75,7 @@ function toggleTimer() {
 
 // Add lap time
 function addLap() {
+    // Lap can be added whether timer is running or stopped
     const lapItem = document.createElement('li');
     lapItem.className = 'lap-item';
     lapItem.innerHTML = `
