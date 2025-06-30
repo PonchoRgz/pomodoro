@@ -75,16 +75,14 @@ function toggleTimer() {
 
 // Add lap time
 function addLap() {
-    if (isRunning) {
-        const lapItem = document.createElement('li');
-        lapItem.className = 'lap-item';
-        lapItem.innerHTML = `
-            <span>Lap ${lapCount}</span>
-            <span>${formatTime(timeLeft)}</span>
-        `;
-        lapList.insertBefore(lapItem, lapList.firstChild);
-        lapCount++;
-    }
+    const lapItem = document.createElement('li');
+    lapItem.className = 'lap-item';
+    lapItem.innerHTML = `
+        <span>Lap ${lapCount}</span>
+        <span>${formatTime(timeLeft)}</span>
+    `;
+    lapList.insertBefore(lapItem, lapList.firstChild);
+    lapCount++;
 }
 
 // Snooze timer
